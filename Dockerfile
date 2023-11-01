@@ -20,8 +20,8 @@ RUN apt-get install -y --no-install-recommends \
 
 # cd into the user directory, download and unzip the github actions runner
 RUN cd /home/docker && mkdir actions-runner && cd actions-runner \
-    && curl -O -L https://github.com/actions/runner/releases/download/v${RUNNER_VERSION}/actions-runner-linux-arm-${RUNNER_VERSION}.tar.gz \
-    && tar xzf ./actions-runner-linux-arm-${RUNNER_VERSION}.tar.gz
+    && curl -O -L https://github.com/actions/runner/releases/download/v${RUNNER_VERSION}/actions-runner-linux-${ARCH}-${RUNNER_VERSION}.tar.gz \
+    && tar xzf ./actions-runner-linux-${ARCH}-${RUNNER_VERSION}.tar.gz
 
 # install some additional dependencies
 RUN perl -p -i -e "s/liblttng-ust0/liblttng-ust1/g" /home/docker/actions-runner/bin/installdependencies.sh
