@@ -3,6 +3,7 @@ FROM ubuntu:22.04
 
 # input GitHub runner version argument
 ARG RUNNER_VERSION
+ARG ARCH
 ENV DEBIAN_FRONTEND=noninteractive
 
 LABEL Author="Craig Edwards"
