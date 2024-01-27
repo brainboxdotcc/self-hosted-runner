@@ -5,4 +5,4 @@
 # ./build.sh arm
 # ./build.sh arm64
 #
-docker build --build-arg ARCH=$1 RUNNER_VERSION=2.311.0 --tag docker-github-runner-lin .
+docker build --build-arg ARCH="$1" --build-arg RUNNER_VERSION=2.311.0 --tag docker-github-runner-lin "."
